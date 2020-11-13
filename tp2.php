@@ -7,7 +7,7 @@
 
 	<?php
 
-			//Définir un constante qui s'appelle TVA
+			// Définir une constante qui s'appelle TVA
 			define("TVA", 0.1);
 
 			// Prix HT d'un produit
@@ -16,6 +16,7 @@
 			// Calcul de prix final
 			$prix = $prix_ht + ($prix_ht * TVA);
 
+			// Affichage de résultat
 			echo "Prix : $prix Euro";
 
 	?>
