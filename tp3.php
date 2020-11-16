@@ -6,9 +6,9 @@
 <body>
 	<?php
 		// Définition d'un variable name de 3 manières:
-		// $name;
+		$name = null;
 		// $name = null;
-		$name = "Ahmed";
+		// $name = "Ahmed";
 
 		// Tester si le variable contient un valeur
 		if(isset($name))
@@ -17,7 +17,7 @@
 			echo("<h3>le name est définie: $name </h3>");
 		}else{
 			// Le name n'est pas définie
-			echo("<h3>le name n'est pas définie: $name </h3>");
+			echo("<h3>le name n'est pas définie </h3>");
 		}
 
 	?>
