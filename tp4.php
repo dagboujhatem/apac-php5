@@ -25,7 +25,7 @@
 					<input type="password" name="password" id="password" placeholder="Type your password here" class="form-control">
 				</div>
 				<div class="form-group">
-					<label for="passwordconfirmation">Password</label>
+					<label for="passwordconfirmation">Password Confirmation</label>
 					<input type="password" name="passwordconfirmation" id="passwordconfirmation" placeholder="Type your password confirmation here" class="form-control">
 				</div>
 				<div>
