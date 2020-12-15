@@ -9,7 +9,7 @@
 		<div class="row">
 			<form class="offset-3 col-6 mt-5" method="post" action="signup.php">
 				<div class="form-group">
-					<label for="firstname">First name</label>
+					<label for="firstname">First Name</label>
 					<input type="text" name="firstname" id="firstname" placeholder="Type your first name here" class="form-control">
 				</div>
 				<div class="form-group">
