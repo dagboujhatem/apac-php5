@@ -7,31 +7,40 @@ $email = $_POST["email"];
 $password = $_POST["password"];
 $password_confirmation = $_POST["passwordconfirmation"];
 
-echo ("<h1> Welcome $first_name $last_name $email $password </h1>");
+// echo ("<h1> Welcome $first_name $last_name $email $password </h1>");
 
 // second step: vérifications des champs (non vides)
-if (!isset($first_name)) {
+if (isset($first_name) && $first_name === "") {
 	// Affichage d'erreur de first name 
-	echo "first name is null <br>";
+	die("first name is empty <br>");
 }
-if (!isset($last_name)) {
+if (isset($last_name) && $last_name === "") {
 	// Affichage d'erreur de last name 
-	echo "last name is null <br>";
+	die("last name is empty <br>");
 }
-if (!isset($email)) {
+if (isset($email) && $email === "") {
 	// Affichage d'erreur d' email
-	echo "email is null <br>";
+	die("email is empty <br>");
 }
-if (!isset($password)) {
+if (isset($password) && $password === "") {
 	// Affichage d'erreur de password 
-	echo "password is null <br>";
+	die("password is empty <br>");
 }
-if (!isset($password_confirmation)) {	
+if (isset($password_confirmation) && $password_confirmation === "") {	
 	// Affichage d'erreur de password confirmation 
-	echo "password confirmation is null <br>";
+	die("password confirmation is empty <br>");
 }
 
 // step 3 : verification password and password confirmation is equal (is mutch)
+
+if ($password === $password_confirmation) {
+	// success (password is mutch) 
+	$password = md5($password);
+ }
+ else {
+	// failed :(
+	die("password is not mutch <br>");
+ }
 
 // setp 4 : Connect to MySQL
 
@@ -55,13 +64,16 @@ $requette = "INSERT INTO users (first_name, last_name, email, password)
 VALUES ('$first_name', '$last_name', '$email', '$password');";
 
 // Affichage de requette
-echo($requette);
+
+//echo($requette);
 
 // step 7 : Exécution de requette
 
 $resultat = mysqli_query($id_connection, $requette) or die(mysqli_connect_error());
 
 // step 8 : Traitement de resultat (c'est-à-dire $resultat)
+
+echo("Bonjour $first_name $last_name, vous êtes bien inscrit dans notre site Web.'");
 
 // step 9 : Close MySQL connection
 
