@@ -73,7 +73,7 @@ $resultat = mysqli_query($id_connection, $requette) or die(mysqli_connect_error(
 
 // step 8 : Traitement de resultat (c'est-à-dire $resultat)
 
-echo("Bonjour $first_name $last_name, vous êtes bien inscrit dans notre site Web.'");
+echo("<h1> Bonjour $first_name $last_name, vous êtes bien inscrit dans notre site Web. </h1> ");
 
 // step 9 : Close MySQL connection
 
